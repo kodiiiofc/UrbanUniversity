@@ -2,7 +2,7 @@ package Inheritance;
 
 import java.time.LocalDate;
 
-public class OlimpicGames {
+public class OlympicGames {
     public static void main(String[] args) {
         LocalDate currentDate = LocalDate.now();
         int currentYear = currentDate.getYear();
