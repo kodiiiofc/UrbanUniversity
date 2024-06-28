@@ -1,21 +1,20 @@
 package Exception;
 
+import java.util.Scanner;
+
 public class ExceptionTask {
     public static void main(String[] args) throws Exception {
 
-        String s1 = "Привет";
-        String s2 = "Прив3т";
-
-        int n1 = 4;
-        int n2 = 6;
-
-        System.out.println(isEven(4));
-
-        System.out.println(withoutNumbers(s1));
-
-        System.out.println(isEven(n2));
-
-        System.out.println(withoutNumbers(s2));
+        Scanner scanner = new Scanner(System.in);
+        while (true) {
+        if (scanner.hasNextInt()) {
+            int number = scanner.nextInt();
+            System.out.println("Число " + isEven(number) + " четное");
+        }
+        else {
+            String string = scanner.nextLine();
+            System.out.println("В строке " + withoutNumbers(string) + " цифр нет");
+        }}
 
     }
 
@@ -27,7 +26,7 @@ public class ExceptionTask {
     }
 
     public static String withoutNumbers(String string) throws Exception {
-        String regex = ".+[0123456789]+.";
+        String regex = ".*\\d+.*";
         if (string.matches(regex)) {
             throw new Exception("Текст содержит число");
         }
