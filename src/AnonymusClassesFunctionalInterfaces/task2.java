@@ -41,6 +41,7 @@ public class task2 {
     }
 }
 
+@FunctionalInterface
 interface Concationble {
     String concat(String stringOne, String stringTwo);
 }
